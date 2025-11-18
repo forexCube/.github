@@ -1,4 +1,4 @@
-# ForexCube =Ê
+# ForexCube ðŸ“Š
 
 > Intelligent forex trading strategy analysis and selection platform
 
@@ -6,7 +6,7 @@
 
 ForexCube is a comprehensive platform for analyzing, evaluating, and selecting optimal forex trading strategies. The system leverages real market data to provide data-driven insights for strategy performance evaluation and portfolio optimization.
 
-## <¯ What We Do
+## ðŸŽ¯ What We Do
 
 ForexCube automates the complex process of evaluating trading strategies (Expert Advisors) by:
 
@@ -15,7 +15,7 @@ ForexCube automates the complex process of evaluating trading strategies (Expert
 - **Selecting** optimal strategies based on data-driven criteria
 - **Optimizing** trading portfolios for maximum efficiency
 
-## =€ Key Features
+## ðŸš€ Key Features
 
 - **Real-time Data Processing**: Advanced analytics on trading operations
 - **Interactive Dashboards**: Comprehensive visualization of strategy performance
@@ -23,7 +23,7 @@ ForexCube automates the complex process of evaluating trading strategies (Expert
 - **Multi-Environment Support**: Separate production and development deployments
 - **Comprehensive Monitoring**: Full observability with metrics and logging
 
-## =Ê Analytics Capabilities
+## ðŸ“Š Analytics Capabilities
 
 - Strategy performance metrics (Sharpe ratio, max drawdown, win rate)
 - Statistical analysis and backtesting
@@ -31,23 +31,23 @@ ForexCube automates the complex process of evaluating trading strategies (Expert
 - Monte Carlo simulation for risk assessment
 - Machine learning-based strategy classification
 
-## <“ Based on Industry Standards
+## ðŸŽ“ Based on Industry Standards
 
 ForexCube incorporates analytical methodologies from:
 - **MIT 15.071 "The Analytics Edge"**: Statistical modeling and optimization
 - **Modern Portfolio Theory**: Risk-adjusted performance analysis
 - **Machine Learning**: Predictive modeling for strategy selection
 
-## < Public Resources
+## ðŸŒ Public Resources
 
 - **Documentation**: Comprehensive guides for each component
 - **Analytics Framework**: Detailed implementation plans for advanced analytics
 - **Deployment Guides**: Multi-environment setup instructions
 
-## =ë Contact
+## ðŸ“« Contact
 
 For inquiries about ForexCube:
-- **Project Lead**: João Ariedi
+- **Project Lead**: JoÃ£o Ariedi
 - **Email**: joaoariedi@gmail.com
 
 ---
