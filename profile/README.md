@@ -48,7 +48,7 @@ ForexCube incorporates analytical methodologies from:
 
 For inquiries about ForexCube:
 - **Project Lead**: João Ariedi
-- **Email**: joaoariedi@gmail.com
+- **Email**: fxcube@pm.me
 
 ---
 
