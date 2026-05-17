@@ -1,55 +1,87 @@
 # ForexCube 📊
 
-> Intelligent forex trading strategy analysis and selection platform
+> A quantitative engine for systematic forex strategy evaluation —
+> and the automated trading operation it governs.
 
-## About ForexCube
+## About
 
-ForexCube is a comprehensive platform for analyzing, evaluating, and selecting optimal forex trading strategies. The system leverages real market data to provide data-driven insights for strategy performance evaluation and portfolio optimization.
+ForexCube is a proprietary platform that evaluates, ranks, and selects
+systematic forex trading strategies, and operates a centrally-managed fleet
+of automated trading systems against the strategies it rates highest. We
+turn the noisy, manual problem of "which strategies actually work, and when"
+into an objective, repeatable, data-driven decision.
 
-## 🎯 What We Do
+## What Sets Us Apart
 
-ForexCube automates the complex process of evaluating trading strategies (Expert Advisors) by:
+### A proprietary, regime-aware scoring engine
+At the core is the **Strategy Score** — a proprietary, multi-factor
+evaluation algorithm that grades each strategy on risk-adjusted
+performance, robustness, maturity, and consistency. Crucially, it is
+**market-regime aware**: a strategy is judged not by a single blended
+number but by how it behaves across distinct market conditions, so
+fragile strategies that only shine in one environment are surfaced rather
+than rewarded. The methodology is developed in disciplined, versioned
+increments and continuously refined.
 
-- **Analyzing** strategy performance with real market data
-- **Visualizing** trading metrics and performance indicators
-- **Selecting** optimal strategies based on data-driven criteria
-- **Optimizing** trading portfolios for maximum efficiency
+### A managed robot farm
+ForexCube runs a **fleet of automated trading systems** under unified,
+infrastructure-as-code governance with continuous monitoring and
+alerting. New automated systems are onboarded, observed, and managed
+through a single operational backbone built to scale.
 
-## 🚀 Key Features
+## Platform Pillars
 
-- **Real-time Data Processing**: Advanced analytics on trading operations
-- **Interactive Dashboards**: Comprehensive visualization of strategy performance
-- **Portfolio Analysis**: Tools for analyzing and optimizing strategy combinations
-- **Multi-Environment Support**: Separate production and development deployments
-- **Comprehensive Monitoring**: Full observability with metrics and logging
+- **Strategy analysis** — performance, drawdown, and consistency analytics
+  on real market data
+- **Regime intelligence** — evaluation conditioned on changing market
+  environments
+- **Portfolio construction** — optimal combination and allocation across
+  the scored strategy universe
+- **Operational monitoring** — full-stack observability across the
+  automated trading fleet
 
-## 📊 Analytics Capabilities
+## Engineering Excellence
 
-- Strategy performance metrics (Sharpe ratio, max drawdown, win rate)
-- Statistical analysis and backtesting
-- Portfolio optimization using linear programming
-- Monte Carlo simulation for risk assessment
-- Machine learning-based strategy classification
+We build like an institution, not a script:
 
-## 🎓 Based on Industry Standards
+- **Spec-driven development** — every feature specified, planned, and
+  reviewed before implementation
+- **Full CI/CD automation** — gated, multi-stage promotion across
+  environments
+- **Automated quality & security gates** — linting, type safety,
+  static analysis, and secret scanning on every change
+- **Comprehensive test coverage** and reproducible regression baselines
+- **End-to-end observability** — metrics, logging, and alerting across
+  services and the trading fleet
 
-ForexCube incorporates analytical methodologies from:
-- **MIT 15.071 "The Analytics Edge"**: Statistical modeling and optimization
-- **Modern Portfolio Theory**: Risk-adjusted performance analysis
-- **Machine Learning**: Predictive modeling for strategy selection
+## Methodology Foundations
 
-## 🌐 Public Resources
+ForexCube's analytics build on established quantitative foundations,
+including **Modern Portfolio Theory** and the statistical-modeling and
+optimization methods taught in **MIT 15.071 "The Analytics Edge"** —
+extended with proprietary, regime-aware techniques.
 
-- **Documentation**: Comprehensive guides for each component
-- **Analytics Framework**: Detailed implementation plans for advanced analytics
-- **Deployment Guides**: Multi-environment setup instructions
+## Roadmap & Ambition
 
-## 📫 Contact
+- **Scale the robot farm** — grow the managed fleet under one
+  governance and observability backbone
+- **Deepen the scoring engine** — richer factors and finer-grained
+  market-regime modeling
+- **Automated capital allocation** — portfolio construction driven
+  directly by live strategy scores
+- **Research track** — exploring advanced statistical and machine-learning
+  methods for strategy selection and risk assessment
+- **Institutional-grade reliability** — continued investment in
+  automation, monitoring, and operational resilience
 
-For inquiries about ForexCube:
+## Contact
+
 - **Project Lead**: João Ariedi
 - **Email**: fxcube@pm.me
 
 ---
 
-**Note**: ForexCube is a proprietary platform for systematic trading strategy evaluation. This organization contains public documentation and resources.
+**Note**: ForexCube is a proprietary platform for systematic trading
+strategy evaluation and automated trading operations. This organization
+hosts only public-facing information; methodology, infrastructure, and
+performance details are confidential.
