@@ -11,7 +11,7 @@ of automated trading systems against the strategies it rates highest. We
 turn the noisy, manual problem of "which strategies actually work, and when"
 into an objective, repeatable, data-driven decision.
 
-## What Sets Us Apart
+## 🎯 What Sets Us Apart
 
 ### A proprietary, regime-aware scoring engine
 At the core is the **Strategy Score** — a proprietary, multi-factor
@@ -54,14 +54,14 @@ We build like an institution, not a script:
 - **End-to-end observability** — metrics, logging, and alerting across
   services and the trading fleet
 
-## Methodology Foundations
+## 🎓 Methodology Foundations
 
 ForexCube's analytics build on established quantitative foundations,
 including **Modern Portfolio Theory** and the statistical-modeling and
 optimization methods taught in **MIT 15.071 "The Analytics Edge"** —
 extended with proprietary, regime-aware techniques.
 
-## Roadmap & Ambition
+## 🚀 Roadmap & Ambition
 
 - **Scale the robot farm** — grow the managed fleet under one
   governance and observability backbone
@@ -74,7 +74,7 @@ extended with proprietary, regime-aware techniques.
 - **Institutional-grade reliability** — continued investment in
   automation, monitoring, and operational resilience
 
-## Contact
+## 📫 Contact
 
 - **Project Lead**: João Ariedi
 - **Email**: fxcube@pm.me
