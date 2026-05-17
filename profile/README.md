@@ -44,14 +44,14 @@ Each stage exists to remove risk before capital is ever exposed:
 Two distinct, proprietary scoring layers — one for strategies, one for
 portfolios — are the core intellectual property.
 
-## The Managed Robot Farm
+## 🤖 The Managed Robot Farm
 
 The strategy farm both *generates* and *operates* automated trading
 systems under unified, infrastructure-as-code governance, with continuous
 monitoring and alerting. New systems are onboarded, observed, and managed
 through a single operational backbone built to scale.
 
-## Engineering Excellence
+## ⚙️ Engineering Excellence
 
 We build like an institution, not a script:
 
