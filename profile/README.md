@@ -28,14 +28,24 @@ the data the operation itself generates:
 
 ## The pipeline
 
-```mermaid
-flowchart LR
-    G["Generate<br/>evolutionary search<br/>+ robustness filters"] --> D["Validate LIVE<br/>demo accounts under<br/>real broker conditions"]
-    D --> A["Analyze<br/>FxCube platform:<br/>metrics · regimes · correlation"]
-    A --> S["Score<br/>strategy + portfolio scores,<br/>reality-adjusted (haircut)"]
-    S --> P["Compose<br/>low-correlation portfolios,<br/>redundancy-filtered"]
-    P --> R["Operate<br/>real capital · monitor<br/>vs. expectation · rotate"]
-    R -->|"every fill feeds back"| A
+```text
+Generate         evolutionary search + robustness filters
+    │
+    ▼
+Validate LIVE    demo accounts under real broker conditions
+    │
+    ▼
+Analyze          metrics · regimes · correlation  ◀────────────┐
+    │                                                          │
+    ▼                                                          │
+Score            strategy + portfolio scores (reality haircut) │
+    │                                                          │
+    ▼                                                          │
+Compose          low-correlation · redundancy-filtered         │
+    │                                                          │
+    ▼                                                          │
+Operate          real capital · monitor · rotate ──────────────┘
+                                         every fill feeds back
 ```
 
 Two proprietary scoring layers are the core IP: a **Strategy Score** that
