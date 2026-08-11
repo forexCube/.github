@@ -30,21 +30,21 @@ the data the operation itself generates:
 
 ```text
 Generate         evolutionary search + robustness filters
-    │
-    ▼
+    |
+    v
 Validate LIVE    demo accounts under real broker conditions
-    │
-    ▼
-Analyze          metrics · regimes · correlation  ◀────────────┐
-    │                                                          │
-    ▼                                                          │
-Score            strategy + portfolio scores (reality haircut) │
-    │                                                          │
-    ▼                                                          │
-Compose          low-correlation · redundancy-filtered         │
-    │                                                          │
-    ▼                                                          │
-Operate          real capital · monitor · rotate ──────────────┘
+    |
+    v
+Analyze          metrics . regimes . correlation  <------------+
+    |                                                          |
+    v                                                          |
+Score            strategy + portfolio scores (reality haircut) |
+    |                                                          |
+    v                                                          |
+Compose          low-correlation, redundancy-filtered          |
+    |                                                          |
+    v                                                          |
+Operate          real capital . monitor . rotate --------------+
                                          every fill feeds back
 ```
 
