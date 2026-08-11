@@ -1,94 +1,90 @@
 # ForexCube 📊
 
-> Risk-first systematic trading. We evolve, score, and assemble trading
-> strategies into low-correlation portfolios engineered to operate below
-> a 5% maximum-drawdown ceiling.
+> Systematic Forex strategy selection validated by **real broker
+> execution** — not by backtests.
 
-## About
+## The thesis
 
-ForexCube is a proprietary quantitative operation built around a single
-conviction: in systematic trading, **controlling drawdown is the edge**.
-Rather than chasing maximum return, we engineer an end-to-end pipeline —
-strategy generation, evaluation, portfolio construction, and governance —
-toward one objective: durable, low-drawdown performance. We turn the noisy,
-manual question of "which strategies actually work, and when" into an
-objective, repeatable, risk-first decision.
+Most algorithmically-generated trading strategies — even after extensive
+robustness testing — fail when they meet real execution: live spreads and
+commissions, slippage and latency, broker-specific pricing, and the subtle
+gaps between historical data and live feeds. ForexCube inverts the usual
+validation order. Candidate strategies must first **survive months of live
+execution on demo accounts under real broker conditions**; only the
+survivors, measured by proprietary scoring that explicitly discounts
+immature evidence and demo-to-real degradation, become eligible for
+capital.
 
-> **Our mandate:** generate and manage portfolios designed to stay within
-> a **sub-5% maximum drawdown** — a ceiling materially tighter than the
-> drawdowns typical of systematic and managed-futures programs. Risk
-> reduction is the product.
+Three working hypotheses drive the system, continuously re-tested against
+the data the operation itself generates:
 
-## 🎯 A Risk-Reduction Pipeline
+1. **Live execution beats simulation** as a predictor of real-account
+   performance.
+2. **Large populations of mutually uncorrelated strategies** compose into
+   portfolios with lower drawdown, less stagnation, and better
+   risk-adjusted return.
+3. **Long and short sides are independent entities** — decomposing them
+   doubles selection granularity and cuts asymmetric regime exposure.
 
-Each stage exists to remove risk before capital is ever exposed:
+## The pipeline
 
-1. **Generate — the strategy farm.** A fleet of machines continuously
-   *breeds* candidate strategies using genetic (evolutionary) algorithms,
-   searching a strategy space far larger than manual design can reach.
-2. **Score — the proprietary Strategy Score.** A proprietary,
-   market-regime-aware scoring engine grades every candidate on
-   risk-adjusted performance, robustness, maturity, and consistency,
-   keeping only the minority that hold up across market conditions.
-3. **Construct — low-correlation portfolios.** The strongest strategies
-   are assembled into portfolios deliberately selected for **low mutual
-   correlation**, so independent return streams offset one another and
-   aggregate drawdown is suppressed by design.
-4. **Score again — the proprietary Portfolio Score.** A second proprietary
-   model evaluates the assembled portfolio *as a whole* — not merely the
-   sum of its parts — before it is trusted with capital.
-5. **Govern — to the mandate.** Every stage is optimized toward the
-   sub-5% maximum-drawdown objective and continuously monitored in
-   operation.
+```mermaid
+flowchart LR
+    G["Generate<br/>evolutionary search<br/>+ robustness filters"] --> D["Validate LIVE<br/>demo accounts under<br/>real broker conditions"]
+    D --> A["Analyze<br/>FxCube platform:<br/>metrics · regimes · correlation"]
+    A --> S["Score<br/>strategy + portfolio scores,<br/>reality-adjusted (haircut)"]
+    S --> P["Compose<br/>low-correlation portfolios,<br/>redundancy-filtered"]
+    P --> R["Operate<br/>real capital · monitor<br/>vs. expectation · rotate"]
+    R -->|"every fill feeds back"| A
+```
 
-Two distinct, proprietary scoring layers — one for strategies, one for
-portfolios — are the core intellectual property.
+Two proprietary scoring layers are the core IP: a **Strategy Score** that
+combines observed quality with the *maturity of the evidence* (a young
+strategy with a great short sample deliberately cannot score high), and a
+**Portfolio Score** that grades the assembled portfolio as a single
+synthetic strategy, penalizing concentration, currency imbalance, regime
+fragility, and dependence on a few leaders. Before any score is computed,
+demo results are marked down by a **reality haircut** calibrated
+per-symbol/per-direction against a live sentinel account with real money —
+the system institutionalizes skepticism about its own data.
 
-## 🤖 The Managed Robot Farm
+## The platform
 
-The strategy farm both *generates* and *operates* automated trading
-systems under unified, infrastructure-as-code governance, with continuous
-monitoring and alerting. New systems are onboarded, observed, and managed
-through a single operational backbone built to scale.
+A proprietary end-to-end stack — analytics backend, operator interface,
+deployment infrastructure, and a managed fleet (strategy-generation
+machines and trading VPSes) under infrastructure-as-code governance with
+full observability.
 
-## ⚙️ Engineering Excellence
+| Repo | What it is |
+|------|------------|
+| `operations_api` | Analytics backend — ingestion/sync, strategies, portfolios, scoring, market regimes, correlation, redundancy filtering |
+| `cube_ui` | The operator interface |
+| `production_server` | Zero-downtime deploy orchestration (dev/stg/prod) |
+| `fleet` | Infrastructure-as-code for the machine fleet + observability |
+| `tasks` | Specs, planning, and work tracking |
+
+## ⚙️ Engineering excellence
 
 We build like an institution, not a script:
 
 - **Spec-driven development** — every feature specified, planned, and
   reviewed before implementation
-- **Full CI/CD automation** — gated, multi-stage promotion across
-  environments
-- **Automated quality & security gates** — linting, type safety,
-  static analysis, and secret scanning on every change
+- **Full CI/CD automation** — gated, multi-stage promotion across three
+  environments, with an end-to-end parity suite (functional + visual)
+  as the release gate
+- **Automated quality & security gates** — linting, type safety, static
+  analysis, and secret scanning on every change
 - **Comprehensive test coverage** and reproducible regression baselines
 - **End-to-end observability** — metrics, logging, and alerting across
   services and the trading fleet
+- **Documentation as code** — per-domain architecture docs and runbooks
+  maintained in the same PRs as the behavior they describe
 
-## 🎓 Methodology Foundations
+## 🚀 Direction
 
-ForexCube's analytics build on established quantitative foundations —
-**Modern Portfolio Theory**, correlation-based diversification, and
-drawdown-centric risk metrics (maximum drawdown, Calmar) — together with
-**evolutionary computation** for strategy generation and the
-statistical-modeling and optimization methods taught in **MIT 15.071
-"The Analytics Edge."** These are extended with proprietary, regime-aware
-techniques.
-
-## 🚀 Roadmap & Ambition
-
-- **Scale the strategy farm** — broaden evolutionary search and the
-  managed fleet under one governance and observability backbone
-- **Deepen both scoring layers** — richer factors and finer-grained
-  market-regime modeling for strategy and portfolio scoring
-- **Tighten the risk envelope** — push the drawdown mandate lower while
-  preserving return quality
-- **Automated capital allocation** — portfolio construction driven
-  directly by live strategy and portfolio scores
-- **Research track** — advanced statistical and machine-learning methods
-  layered on top of the scoring engines
-- **Institutional-grade reliability** — continued investment in
-  automation, monitoring, and operational resilience
+Scale the validated-strategy population, deepen the regime-aware scoring
+layers, automate portfolio rotation, and — conditional on sustained
+performance — open the structure to external capital.
 
 ## 📫 Contact
 
@@ -98,8 +94,8 @@ techniques.
 ---
 
 **Note**: ForexCube is a proprietary platform for systematic trading
-strategy evaluation and automated trading operations. Risk targets stated
-here describe design objectives and mandates, not realized performance or
+strategy evaluation and automated trading operations. Statements here
+describe design objectives and methodology, not realized performance or
 any assurance of results. This organization hosts only public-facing
-information; methodology, infrastructure, and performance details are
+information; methodology detail, infrastructure, and performance data are
 confidential.
